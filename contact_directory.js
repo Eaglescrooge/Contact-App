@@ -1,4 +1,4 @@
-define(["./sandbox"], function (sb) {
+var sb = require("./sandbox.js");
 
     var id, el, list, add;
 
@@ -44,10 +44,9 @@ define(["./sandbox"], function (sb) {
         e.preventDefault();
     }
 
-    return {
-        id: id,
-        init: init,
-        addListing: addListing,
-        closeDirectory: closeDirectory
-    }
-})
+
+        module.exports.id = id;
+        module.exports.init = init;
+        module.exports.addListing = addListing;
+        module.exports.closeDirectory = closeDirectory;
+    

@@ -1,5 +1,4 @@
-define(["./sandbox"], function (sb) {
-
+var sb = require("./sandbox.js");
     var id, name, phone, el, add;
 
     id = "add-contact";

@@ -1,4 +1,4 @@
-define(["./core"], function (CORE) {
+var CORE = require("./core.js");
 
     function listen(evt, module_id) {
         CORE.registerEvents(evt, module_id);
@@ -8,9 +8,6 @@ define(["./core"], function (CORE) {
         CORE.triggerEvents(evt);
     }
 
-    return {
-        listen: listen,
-        notify:  notify
-    }
 
-})
+    module.exports.listen = listen;
+    module.exports.notify = notify;
